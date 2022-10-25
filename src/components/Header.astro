@@ -1,5 +1,6 @@
 ---
 import logo from '../images/rain.png';
+import user from '../images/person_icon.png';
 ---
 
 <header class = "header">
@@ -9,11 +10,17 @@ import logo from '../images/rain.png';
             <img src={logo} alt="" />
         </a>
         </div>
+        <div class = "title">
+            <p> Accessibility Website</p>
+        </div>
         <nav>
-            <ul>
+            <ul class = "links">
                 <li> <a href="/catalog">Catalog</a></li>
                 <li> <a href="/CCCalculator">Color Contrast Calculator</a></li>
                 <li> <a href="/quiz">Quiz</a></li>
+                <li> <a href = "/user">
+                    <img src = {user} alt="" />
+                    </a></li>
             </ul>
         </nav>
     </div>
@@ -22,7 +29,7 @@ import logo from '../images/rain.png';
 <style>
 .header {
     height:  70px;
-    background-color: rgb(10, 116, 222);;
+    background-color: rgb(10, 116, 222);
 }
 
 .header .container{
@@ -30,10 +37,36 @@ import logo from '../images/rain.png';
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
+.header img{
+    height: 65px;
+    vertical-align: left;
+}
 
+.header .container .title{
+    font-size: 50px;
+    vertical-align: center;
+    color:whitesmoke;
 
+}
+
+.header ul li img{
+    height:40px;
+    vertical-align: right;
+}
+
+.links {
+    display:inline-flex;
+    list-style: none;
+    border: 1.5px;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: lightblue;
+    opacity: .7;
+    padding: 0px 25px;
+    gap: 15px;
+}
 
 </style>
