@@ -1,7 +1,7 @@
 {
   "name": "capstone1",
   "version": "0.1.0",
-  "homepage": "https://coralrr.github.io/Capstone",
+  "homepage": "https://coralrr.github.io/Capstone/tree/main/capstone1",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
