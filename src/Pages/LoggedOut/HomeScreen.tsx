@@ -7,18 +7,19 @@ const HomeScreen = () => {
     const [redirect, setRedirect] = useState(false);
     const [regredirect, setRegRedirect] = useState(false);
 
-    async function login() {
-       
+    async function sign_up() {
+        // TODO: sign up function will go here.
         setRedirect(true);
-
-
     }
 
-    async function register() {
-       
+    async function sign_in() {
+        // TODO: login function will go here.
         setRegRedirect(true);
+    }
 
-
+    async function sign_out() {
+        // TODO: logout function will go here.
+        setRegRedirect(true);
     }
 
     if (redirect) {
@@ -36,15 +37,15 @@ const HomeScreen = () => {
 
             <div className="container">
                 <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-                    <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                    <a href="/src/Pages" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                         <svg className="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlinkHref="#bootstrap"/></svg>
                     </a>
 
                     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="/" className="nav-link px-2 link-secondary">Home</a></li>
-                        <li><a href="#" className="nav-link px-2 link-dark">Catalog</a></li>
-                        <li><a href="#" className="nav-link px-2 link-dark">Contrast Calculator</a></li>
-                        <li><a href="#" className="nav-link px-2 link-dark">About</a></li>
+                        <li><a href="/src/Pages" className="nav-link px-2 link-secondary">Home</a></li>
+                        <li><a href="src/Pages/LoggedOut/HomeScreen#" className="nav-link px-2 link-dark">Catalog</a></li>
+                        <li><a href="src/Pages/LoggedOut/HomeScreen#" className="nav-link px-2 link-dark">Contrast Calculator</a></li>
+                        <li><a href="src/Pages/LoggedOut/HomeScreen#" className="nav-link px-2 link-dark">About</a></li>
                     </ul>
 
                     <div className="col-md-3 text-end">
@@ -59,7 +60,7 @@ const HomeScreen = () => {
                                 size="small"
                                 variant="outlined"
                                 color="secondary"
-                                onClick={() => login()}>
+                                onClick={() => sign_in()}>
                                 Sign in
                             </Button>
                             
@@ -72,8 +73,20 @@ const HomeScreen = () => {
                                 size="small"
                                 variant="contained"
                                 color="primary"
-                                onClick={() => register()}>
+                                onClick={() => sign_up()}>
                                 Sign Up
+                            </Button>
+                            <Button
+                                style={{
+
+                                    margin: '0 auto',
+                                    padding: 5
+                                }}
+                                size="small"
+                                variant="contained"
+                                color="primary"
+                                onClick={() => sign_out()}>
+                                Sign Out
                             </Button>
                         </Box>
                     </div>
@@ -87,7 +100,7 @@ const HomeScreen = () => {
                                 component="img"
                                 
                                 height="400"
-                                image={require('./../../assets/images/p.png')}
+                                image={require('../../assets/images/p.png')}
                                 alt="perceivable"
                                 />
                                 <CardContent>
@@ -104,7 +117,7 @@ const HomeScreen = () => {
                                 <CardMedia
                                 component="img"
                                 height="400"
-                                image={require('./../../assets/images/o.png')}
+                                image={require('../../assets/images/o.png')}
                                 alt="perceivable"
                                 />
                                 <CardContent>
@@ -121,7 +134,7 @@ const HomeScreen = () => {
                                 <CardMedia
                                 component="img"
                                 height="400"
-                                image={require('./../../assets/images/u.png')}
+                                image={require('../../assets/images/u.png')}
                                 alt="perceivable"
                                 />
                                 <CardContent>
@@ -138,7 +151,7 @@ const HomeScreen = () => {
                                 <CardMedia
                                 component="img"
                                 height="400"
-                                image={require('./../../assets/images/r.png')}
+                                image={require('../../assets/images/r.png')}
                                 alt="perceivable"
                                 />
                                 <CardContent>
@@ -160,7 +173,7 @@ const HomeScreen = () => {
                             paddingBottom: 20
 
                         }}>
-                        <Typography align = "center" >To learn more about accesibility with examples, quizes, and track your progress...</Typography>
+                        <Typography align = "center" >To learn more about accessibility with examples, quiz's, and track your progress...</Typography>
 
                     </Box>
                     <Button
@@ -172,8 +185,8 @@ const HomeScreen = () => {
                         size="large"
                         variant="contained"
                         color="primary"
-                        onClick={() => register()}>
-                        Get Started
+                        onClick={() => sign_up()}>
+                        Get Started - Sign Up
                     </Button>
                 </main>
                 
